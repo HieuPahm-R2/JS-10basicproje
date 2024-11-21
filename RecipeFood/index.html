@@ -11,17 +11,24 @@
 <body>
     <div class="container">
         <header>
-            <input type="text" name="" id="search-st">
+            <input type="text" id="search-term">
             <button id="search"><i class="fas fa-search"></i></button>
         </header>
         <div class="fav-container">
             <h3>Find Your Favorite Meals</h3>
             <ul class="list-food" id="list-food">
-               
             </ul>
         </div>
         <div class="meals" id="meals">
             
+        </div>
+    </div>
+    <div class="popup-container hidden" id="meal-popup">
+        <div class="popup">
+            <button class="close-popup" id="close-popup">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="meal-info" id="meal-info"></div>
         </div>
     </div>
 

@@ -42,6 +42,10 @@ header button{
     background-color: transparent;
     font-size: 1.5rem;
     color: rgb(157, 231, 206);
+    cursor: pointer;
+}
+header button:hover{
+    color: rgb(5, 50, 35);
 }
 .fav-container{
     padding: 1rem;
@@ -62,9 +66,21 @@ header button{
     border-radius: 50%;
 }
 .list-food li{
+    position: relative;
     width: 85px;
 }
-
+.list-food li .clear{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    color: rgb(201, 114, 114);
+    border: none;
+    cursor: pointer;
+}
+.list-food li .clear:hover{
+    color: red;
+}
 .meal-footer{
     display: flex;
     justify-content: space-between;
@@ -101,4 +117,42 @@ color: red;
     width: 100%;
     object-fit: cover;
     height: 250px;
+}
+.popup-container{
+    /* inset: 0; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-container.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+.popup{
+    background: #e6bebe;
+    max-width: 650px;
+    width: 100%;
+    max-height: 80vh;
+    padding: 1.2rem;
+    border-radius: 5px;
+    position: relative;
+    overflow: auto;
+}
+.close-popup{
+    position: absolute;
+    top:0.5rem;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.meal-info h1{
+    text-align: center;
 }
